@@ -45,3 +45,18 @@ div {
   font-size: 1em;
   color: #135a66;
 }
+
+.priority-low {
+  font-weight: bold;
+  color: greenyellow;
+}
+
+.priority-medium {
+  font-weight: bold;
+  color: orange;
+}
+
+.priority-high {
+  font-weight: bold;
+  color: red;
+}
