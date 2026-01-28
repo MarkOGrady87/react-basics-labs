@@ -11,26 +11,15 @@ const Task = (props) => {
       <p className="description">
         {props.description ? "Description: " + props.description : ""}
       </p>
-      {/* <p className="priority">{props.priority}</p> */}
+      <p style={{ backgroundColor: props.priority === "High" ? "#FF1111" : props.priority === "Medium" ? "#DD6700" : "#00FF00"}}>{props.priority}</p>
       <div>
-        {props.priority === "Low" && (
-          <p className="priority-low">{props.priority}</p>
-        )}
-
-        {props.priority === "Medium" && (
-          <p className="priority-medium">{props.priority}</p>
-        )}
-
-        {props.priority === "High" && (
-          <p className="priority-high">{props.priority}</p>
-        )}
-      </div>
       <button onClick={props.markDone} className="doneButton">
         Done
       </button>
       <button className="deleteButton" onClick={props.deleteTask}>
         Delete
       </button>
+      </div>
     </div>
   );
 };
